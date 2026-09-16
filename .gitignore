@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 output/*.docx
 !output/.gitkeep
+# Personal template (never commit)
+templates/Lettre_de_motivation_Hazem_Ben_Alaya_AI.docx
