@@ -1,0 +1,5 @@
+google-genai
+python-dotenv
+python-docx
+requests
+beautifulsoup4
