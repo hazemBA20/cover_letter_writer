@@ -30,6 +30,16 @@ Run everything with the venv interpreter:
 .venv\Scripts\python.exe main.py --help
 ```
 
+## Web UI
+
+A simple form that replaces the command line: fill in the fields, press **Generate**.
+
+```powershell
+.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+Then open the shown URL (usually http://localhost:8501). The form asks for company *, position *, website, LinkedIn, job description, and the template (upload a `.docx` or keep the default path). The API key can come from `.env` or be pasted in the sidebar (password field, overrides `.env`). Generated paragraphs are previewed, the finished letter is saved to `output/` and offered as a download.
+
 ## Template requirements
 
 The `.docx` template **must** contain exactly these two placeholders, each on its own paragraph:
@@ -122,6 +132,7 @@ Company + Position + URLs + Job Description
 ```text
 .
 ├── main.py
+├── app.py
 ├── config.py
 ├── requirements.txt
 ├── .env.example
@@ -150,4 +161,4 @@ Company + Position + URLs + Job Description
 
 ## Out of scope (MVP)
 
-LangChain/LangGraph, RAG/vector DBs, agents, LinkedIn scraping, DB/auth, web UI, job-board scraping.
+LangChain/LangGraph, RAG/vector DBs, agents, LinkedIn scraping, DB/auth, job-board scraping.
